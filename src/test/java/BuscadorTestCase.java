@@ -9,12 +9,12 @@ import java.util.List;
 class BuscadorTestCase {
 
     Buscador buscador;
-    String[] nombres = {"Luca", "Jose", "David"};
     List<String> listaNombres;
 
     @BeforeEach
     void setUp() {
         buscador = new Buscador();
+        String[] nombres = {"Luca", "Jose", "David"}; /*puesto en setUp()*/
         listaNombres = Arrays.asList(nombres);
     }
 
