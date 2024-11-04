@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: DiscountCalculatorTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.008 s <<< FAILURE! - in DiscountCalculatorTest
+testCalculateDiscountRegular  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2.5> but was: <0.0>
+	at DiscountCalculatorTest.testCalculateDiscountRegular(DiscountCalculatorTest.java:14)
+
+testCalculateDiscountVIP  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <10.0> but was: <0.0>
+	at DiscountCalculatorTest.testCalculateDiscountVIP(DiscountCalculatorTest.java:25)
+
