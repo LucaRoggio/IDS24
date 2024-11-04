@@ -4,37 +4,61 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example.insw</groupId>
-    <artifactId>project</artifactId>
+    <groupId>org.example</groupId>
+    <artifactId>insw</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.0</version> <!-- Ensure compatibility with Java 11 -->
+        <relativePath/>
+    </parent>
+
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>11</java.version>
     </properties>
 
-<!-- ... -->
-<dependencies>
-    <!-- ... -->
-    <dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter</artifactId>
-        <version>5.11.0</version> <!-- can be omitted when using the BOM -->
-        <scope>test</scope>
-    </dependency>
-    <!-- ... -->
-</dependencies>
-<build>
-    <plugins>
-        <plugin>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.3.1</version>
-        </plugin>
-        <plugin>
-            <artifactId>maven-failsafe-plugin</artifactId>
-            <version>3.3.1</version>
-        </plugin>
-    </plugins>
-</build>
+    <dependencies>
+        <!-- Spring Boot Starter for Web Applications -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
+        <!-- Spring Boot Starter for Thymeleaf (Optional, for rendering HTML views) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!-- Optional for testing -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven Plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <!-- Compiler Plugin for Java 11 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
